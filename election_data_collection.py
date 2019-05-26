@@ -84,7 +84,7 @@ for state in states:
 
     # print(json.dumps(seat, indent=2))
     results.append(seat)
-    print("Done for", seat["state"], state, seat["constituency"], constituency_code, len(results))
+    print("Collected data for", seat["state"], state, seat["constituency"], constituency_code, len(results))
     # Do not send too many hits to server. be gentle. wait.
     time.sleep(0.5)
 
