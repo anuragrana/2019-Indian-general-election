@@ -88,9 +88,29 @@ def nota_votes():
     print("NOTA votes casted:", nota_votes_count)
 
 
+def seats_won_by_party(party_name):
+    winning_party = list()
+    for constituency in data:
+        candidates = constituency["candidates"]
+
+        if len(candidates) < 2:
+            # probably voting was rescinded
+            continue
+        candidates = sorted(candidates, key=lambda candidate: candidate['total_votes'], reverse=True)
+        if candidates[0]["party_name"] == party_name:
+            winning_party.append(
+                candidates[0]["candidate_name"] + " from " + constituency["constituency"] + ". Votes: " + str(
+                    candidates[0]["total_votes"]))
+
+    print(len(winning_party))
+    for l in winning_party:
+        print(l)
+
+
 candidates_two_constituency()
 candidate_highest_votes()
 highest_margin()
 lowest_margin()
 total_votes()
 nota_votes()
+seats_won_by_party("indian national congress")
