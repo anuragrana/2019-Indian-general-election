@@ -16,7 +16,7 @@ Scraping data of 2019 Indian general election using Python Request and Beautiful
 - Add visualization using pie charts or bar graphs.
 
 #### Contribution:
-Feel free to fork this repository, optimize code and add features. 
+Feel free to fork this repository, optimize code and add features.   
 Check the open tickets here - https://github.com/anuragrana/2019-Indian-general-election/issues
  
  
